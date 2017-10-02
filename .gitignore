@@ -1,0 +1,9 @@
+tmp_project/
+shared/Dockerfile
+.idea/
+02_build_in_host_create_dedicated_image/www/
+02_build_in_host_create_dedicated_image/conf/
+03_build_everything_inside_image_upon_image_creation/www/
+03_build_everything_inside_image_upon_image_creation/conf/
+04_checkout_on_host_build_on_start/www/
+04_checkout_on_host_build_on_start/conf/
