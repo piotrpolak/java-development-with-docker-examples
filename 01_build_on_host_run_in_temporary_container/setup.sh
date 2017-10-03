@@ -11,7 +11,7 @@ fi
 
 docker run \
     -it \
-    --rm -w=/app \
+    --rm \
     --volume=`pwd`/../shared/conf/httpd.properties:/app/httpd/httpd.properties \
     --volume=`pwd`/../shared/conf/mime.type:/app/httpd/mime.type \
     --volume=`pwd`/../shared/www/:/app/httpd/www/ \
@@ -19,5 +19,6 @@ docker run \
     --name=01_sample \
     -p 8080:8080 \
     anapsix/alpine-java \
+    -w=/app \
     java -jar cli-all.jar
 
