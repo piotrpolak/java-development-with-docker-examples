@@ -10,15 +10,15 @@ A sample HTTP server
 [https://github.com/piotrpolak/android-http-server](https://github.com/piotrpolak/android-http-server)
 is used for demonstration purposes.
 
-# 1. Build on host machine, run on temporary container
+# 1. Build on host machine, run in a temporary container
 
 * [setup.sh](01_build_on_host_run_in_temporary_container/setup.sh)
 
-The container will be immediately destroyed after the execution of `./setup.sh` is terminated.
+The container will be immediately destroyed after the execution of `./setup.sh` is interrupted.
 
-All the configuration and HTML document is mounted dynamically to the container.
+All the configuration and HTML document is mounted as a shared volume to the container.
 
-This setup supposes you have git and java available at the host machine.
+This setup supposes you have both `git` and `java` available at the host machine.
 
 # 2. Build on host machine, create dedicated image
 
@@ -29,7 +29,7 @@ After running `./setup.sh` you will be able to run the HTTP server again by exec
 
 All the configuration is bundled inside the container.
 
-This setup supposes you have git and java available at the host machine.
+This setup supposes you both have `git` and `java` available at the host machine.
 
 # 3. Build everything inside image upon image creation
 
@@ -40,7 +40,7 @@ After running `./setup.sh` you will be able to run the HTTP server again by exec
 
 All the configuration is bundled inside the container.
 
-This setup DOES NOT REQUIRE you have git nor java available at the host machine.
+This setup DOES NOT REQUIRE you to have `git` nor `java` available at the host machine.
 
 # 4. Checkout project locally, create base image and build project upon container start
 
@@ -51,4 +51,4 @@ After running `./setup.sh` you will be able to run the HTTP server again by exec
 
 All the configuration is bundled inside the container.
 
-This setup supposes you have git installed on your machine but DOES NOT require to have java installed at the host machine.
+This setup supposes you have `git` installed but DOES NOT require to have `java` installed at the host machine.
